@@ -1,0 +1,42 @@
+:root {
+  /* Core Colors - GMAD Brand Manual */
+  --bg: #0b1a10;
+  --bg-alt: #0f2016;
+  --fg: #f2f2f2;
+  --fg-muted: #9ab3a0;
+
+  /* Cards & Surfaces */
+  --card: #112118;
+  --card-alt: #0d1a12;
+  --border: #1e3528;
+
+  /* Primary - Green (Pantone 7483C: #1C6734) */
+  --primary: #1C6734;
+  --primary-bright: #28a04e;
+  --primary-dark: #144d27;
+  --primary-fg: #ffffff;
+  --primary-light: rgba(28, 103, 52, 0.15);
+
+  /* Accent - Orange/Red (Pantone 166C: #E76041) */
+  --accent: #E76041;
+  --accent-dark: #c94a2e;
+  --accent-light: rgba(231, 96, 65, 0.15);
+
+  /* Glows */
+  --glow-green: 0 0 30px rgba(28, 103, 52, 0.35);
+  --glow-accent: 0 0 30px rgba(231, 96, 65, 0.3);
+
+  /* Gradients */
+  --gradient-cta: linear-gradient(135deg, #1C6734, #28a04e);
+  --gradient-card: linear-gradient(145deg, #142a1b, #0b1a10);
+  --gradient-text-green: linear-gradient(135deg, #28a04e, #5cd47a);
+  --gradient-text-accent: linear-gradient(135deg, #E76041, #f0906e);
+
+  /* Spacing */
+  --radius: 0.75rem;
+  --radius-lg: 1rem;
+  --section-pad: 96px 16px;
+
+  /* Typography - Frutiger LT Std (manual) / Nunito Sans (web fallback) */
+  --font-main: 'Nunito Sans', 'Trebuchet MS', Calibri, sans-serif;
+}
