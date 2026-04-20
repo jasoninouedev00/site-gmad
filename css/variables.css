@@ -1,41 +1,57 @@
 :root {
   /* Core Colors - GMAD Brand Manual */
-  --bg: #0b1a10;
-  --bg-alt: #0f2016;
-  --fg: #f2f2f2;
-  --fg-muted: #9ab3a0;
+  --bg: #ffffff;
+  --bg-alt: #f2f7f4;
+  --fg: #1a2e22;
+  --fg-muted: #4a6656;
 
   /* Cards & Surfaces */
-  --card: #112118;
-  --card-alt: #0d1a12;
-  --border: #1e3528;
+  --card: #ffffff;
+  --card-alt: #f7fbf8;
+  --border: #c8ddd0;
 
   /* Primary - Green (Pantone 7483C: #1C6734) */
   --primary: #1C6734;
   --primary-bright: #28a04e;
   --primary-dark: #144d27;
   --primary-fg: #ffffff;
-  --primary-light: rgba(28, 103, 52, 0.15);
+  --primary-light: rgba(28, 103, 52, 0.10);
+  --primary-border: rgba(28, 103, 52, 0.20);
+  --primary-hover: rgba(28, 103, 52, 0.28);
 
   /* Accent - Orange/Red (Pantone 166C: #E76041) */
   --accent: #E76041;
   --accent-dark: #c94a2e;
-  --accent-light: rgba(231, 96, 65, 0.15);
+  --accent-light: rgba(231, 96, 65, 0.10);
+  --accent-border: rgba(231, 96, 65, 0.20);
+  --accent-hover: rgba(231, 96, 65, 0.22);
 
   /* Glows */
-  --glow-green: 0 0 30px rgba(28, 103, 52, 0.35);
-  --glow-accent: 0 0 30px rgba(231, 96, 65, 0.3);
+  --glow-green: 0 4px 24px rgba(28, 103, 52, 0.18);
+  --glow-accent: 0 4px 24px rgba(231, 96, 65, 0.18);
 
   /* Gradients */
   --gradient-cta: linear-gradient(135deg, #1C6734, #28a04e);
-  --gradient-card: linear-gradient(145deg, #142a1b, #0b1a10);
-  --gradient-text-green: linear-gradient(135deg, #28a04e, #5cd47a);
-  --gradient-text-accent: linear-gradient(135deg, #E76041, #f0906e);
+  --gradient-card: linear-gradient(145deg, #f2f7f4, #ffffff);
+  --gradient-text-green: linear-gradient(135deg, #1C6734, #28a04e);
+  --gradient-text-accent: linear-gradient(135deg, #E76041, #c94a2e);
 
   /* Spacing */
   --radius: 0.75rem;
   --radius-lg: 1rem;
   --section-pad: 96px 16px;
+
+  /* Surfaces & Overlays */
+  --dark-bg: #0b1a10;
+  --overlay-bg: rgba(13, 26, 15, 0.98);
+  --navbar-bg: rgba(255, 255, 255, 0.97);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 20px rgba(0, 0, 0, 0.08);
+
+  /* Third-party Brands */
+  --whatsapp: #25d366;
+  --whatsapp-hover: #1fba57;
 
   /* Typography - Frutiger LT Std (manual) / Nunito Sans (web fallback) */
   --font-main: 'Nunito Sans', 'Trebuchet MS', Calibri, sans-serif;

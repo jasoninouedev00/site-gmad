@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GMAD — Tudo para Moveis</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
   <meta name="description"
     content="GMAD: a mais completa linha de produtos e servicos na producao de moveis. Rede especializada em marcenaria.">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap"
@@ -34,14 +35,15 @@
   <nav class="navbar" id="main-navbar" style="opacity: 0; transition: opacity 0.1s; pointer-events: none;">
     <div class="container">
       <a href="#" class="navbar-brand">
-        <span class="logo-text text-gradient-green">GMAD</span>
+        <img src="assets/img/gmad.webp" alt="GMAD" style="height: 32px; display: block;">
       </a>
 
       <div class="navbar-links">
         <a href="#" class="active">Home</a>
         <a href="#sobre">Sobre</a>
         <a href="#produtos">Produtos</a>
-        <a href="#numeros">Resultados</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#lojas">Nossas Lojas</a>
         <a href="#contato">Contato</a>
         <a href="#contato" class="btn-cta navbar-cta">Fale Conosco</a>
       </div>
@@ -58,50 +60,62 @@
     <!-- ============================
        HERO
        ============================ -->
-    <section class="hero">
+    <section class="hero hero-split">
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
       <div class="hero-glow"></div>
 
-      <div class="hero-content fade-up">
-        <div class="hero-badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-            </polygon>
-          </svg>
-          Rede Especializada em Marcenaria
-        </div>
-
-        <h1 class="hero-title">
-          <span class="text-gradient-green">Tudo para moveis.</span><br>
-          Tudo para sua marcenaria.
-        </h1>
-
-        <p class="hero-subtitle">
-          Oferecemos a mais completa linha de produtos e servicos na producao de moveis, atendendo plenamente as
-          demandas dos profissionais da area.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#produtos" class="btn-cta">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <path d="M16 10a4 4 0 0 1-8 0"></path>
-            </svg>
-            Ver Produtos
-          </a>
-          <a href="#sobre" class="btn-outline">
-            Conhecer a GMAD
+      <div class="container hero-split-inner">
+        <div class="hero-content fade-up">
+          <div class="hero-badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
             </svg>
-          </a>
+            Rede Especializada em Marcenaria
+          </div>
+
+          <div class="hero-logo-block">
+            <img src="assets/img/gmad.webp" alt="GMAD" class="hero-logo">
+          </div>
+
+          <h1 class="hero-title">
+            Tudo para Móveis,<br>
+            <span class="text-gradient-accent">Marcenaria e Decoração.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Oferecemos a mais completa linha de produtos e serviços na produção de móveis, atendendo plenamente as
+            demandas dos profissionais da área.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#produtos" class="btn-cta">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              Ver Produtos
+            </a>
+            <a href="#sobre" class="btn-outline">
+              Conhecer a GMAD
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-up" style="animation-delay: 0.2s;">
+          <div class="hero-image-frame">
+            <img src="assets/img/group-5155.webp" alt="Marcenaria GMAD" class="hero-img">
+          </div>
         </div>
       </div>
 
@@ -111,6 +125,22 @@
         </div>
       </div>
     </section>
+
+    <!-- ============================
+       QUICK NAV
+       ============================ -->
+    <div class="quicknav">
+      <div class="container">
+        <a href="#bola-da-vez" class="quicknav-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l1.09 3.26L16.5 12l-3.41 1.74L12 16l-1.09-3.26L7.5 12l3.41-1.74z"/></svg>
+          Bola da Vez
+        </a>
+        <a href="https://portaltudoparamoveis.com.br" target="_blank" class="quicknav-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Blog GMAD
+        </a>
+      </div>
+    </div>
 
     <!-- ============================
        VALORES / SOBRE
@@ -196,117 +226,324 @@
         </div>
 
         <div class="categories-grid">
+
           <div class="category-card fade-up">
-            <div class="category-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1C6734" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-              </svg>
+            <div class="card-img-wrap">
+              <img src="assets/img/img_sets/mdf.jpg.webp" alt="MDF" loading="lazy">
             </div>
-            <h3>Adesivos</h3>
-            <p>Cola instantanea, PVA, hot melt e muito mais</p>
+            <div class="card-body">
+              <h3>MDF</h3>
+              <p>Placas de fibra de média densidade para móveis planejados</p>
+            </div>
           </div>
 
           <div class="category-card fade-up">
-            <div class="category-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1C6734" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
-                </path>
-              </svg>
+            <div class="card-img-wrap">
+              <img src="assets/img/img_sets/fitas.jpg.webp" alt="Fitas de Borda" loading="lazy">
             </div>
-            <h3>Ferramentas</h3>
-            <p>Equipamentos profissionais para corte, acabamento e montagem</p>
+            <div class="card-body">
+              <h3>Fitas de Borda</h3>
+              <p>Fitas e bordas para acabamento perfeito em painéis e MDF</p>
+            </div>
           </div>
 
           <div class="category-card fade-up">
-            <div class="category-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1C6734" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-              </svg>
+            <div class="card-img-wrap">
+              <img src="assets/img/img_sets/Dobradicas.jpg.webp" alt="Ferragens" loading="lazy">
             </div>
-            <h3>Abrasivos</h3>
-            <p>Lixas, discos e fitas para acabamento perfeito</p>
+            <div class="card-body">
+              <h3>Ferragens</h3>
+              <p>Puxadores, dobradiças, corrediças, perfis e fechaduras</p>
+            </div>
           </div>
 
           <div class="category-card fade-up">
-            <div class="category-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1C6734" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="9" x2="21" y2="9"></line>
-                <line x1="9" y1="21" x2="9" y2="9"></line>
-              </svg>
+            <div class="card-img-wrap">
+              <img src="assets/img/img_sets/compensado.jpg.webp" alt="Compensados" loading="lazy">
             </div>
-            <h3>Fitas & Bordas</h3>
-            <p>Fitas de borda, mascaramento e acabamento</p>
+            <div class="card-body">
+              <h3>Compensados</h3>
+              <p>Chapas de compensado multilaminado para estruturas</p>
+            </div>
           </div>
+
+          <div class="category-card fade-up">
+            <div class="card-img-wrap">
+              <img src="assets/img/img_sets/aramados.jpg.webp" alt="Aramados" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Aramados</h3>
+              <p>Cestos, gavetas e organizadores aramados para móveis</p>
+            </div>
+          </div>
+
+          <div class="category-card fade-up">
+            <div class="card-img-wrap">
+              <img src="assets/img/img_sets/madeira.jpg.webp" alt="Madeiras" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Madeiras</h3>
+              <p>Decks, assoalhos, pranchas e lambril de qualidade</p>
+            </div>
+          </div>
+
+          <div class="category-card fade-up">
+            <div class="card-img-wrap">
+              <img src="assets/img/img_sets/colas.jpg.webp" alt="Colas" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Colas</h3>
+              <p>Adesivos e colas para marcenaria de alto desempenho</p>
+            </div>
+          </div>
+
+          <div class="category-card fade-up">
+            <div class="card-img-wrap">
+              <img src="assets/img/img_sets/257415.webp" alt="Laminados" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Laminados</h3>
+              <p>Laminados decorativos e Eucadur para superfícies nobres</p>
+            </div>
+          </div>
+
+          <div class="category-card fade-up category-card--accent">
+            <div class="card-img-wrap">
+              <img src="assets/img/img_sets/ferramenta.jpg.webp" alt="Ferramentas" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Ferramentas</h3>
+              <p>Ferramentas e equipamentos para o marceneiro profissional</p>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
 
     <!-- ============================
-       STATS / NUMEROS
+       BOLA DA VEZ
        ============================ -->
-    <section id="numeros" class="section-pad stats-section" style="position: relative;">
+    <section id="bola-da-vez" class="bdv-section">
+      <div class="bdv-glow bdv-glow--left"></div>
+      <div class="bdv-glow bdv-glow--right"></div>
+      <div class="container">
+
+        <div class="bdv-hero fade-up">
+          <div class="bdv-hero-logo">
+            <img src="assets/img/bola-da-vez/download.png" alt="Logo Bola da Vez GMAD" class="bdv-logo-img">
+          </div>
+          <div class="bdv-hero-info">
+            <div class="bdv-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Promoção Quinzenal
+            </div>
+            <h2>A cada quinzena, um produto em <span class="text-gradient-accent">destaque</span></h2>
+            <p>Um produto selecionado especialmente para fazer a diferença na sua marcenaria. Acesse o site GMAD e veja qual está em campo agora, com condições exclusivas.</p>
+            <div class="bdv-hero-actions">
+              <a href="https://www.gmad.com.br/institucional/bola-da-vez" target="_blank" class="bdv-btn">
+                Ver produto em destaque
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================
+       CENTRO DE SERVIÇOS
+       ============================ -->
+    <section id="servicos" class="section-pad">
       <div class="container">
         <div class="section-header fade-up">
           <div class="badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-              <polyline points="17 6 23 6 23 12"></polyline>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="9" y1="3" x2="9" y2="21"></line>
             </svg>
-            Nossos Numeros
+            Centro de Serviços
           </div>
-          <h2>Resultados que <span class="text-gradient-green">falam por si</span></h2>
+          <h2>Conheça nossos <span class="text-gradient-green">serviços</span></h2>
+          <p>Terceirização completa da produção do móvel, aumentando sua qualidade e reduzindo o tempo de entrega.</p>
         </div>
 
-        <div class="stats-row fade-up">
-          <div class="stat-item">
-            <div class="stat-number text-gradient-green" data-count="500" data-suffix="+">0</div>
-            <div class="stat-label">Marcenarias Atendidas</div>
+        <div class="features-grid">
+          <div class="feature-card fade-up">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C6734" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><line x1="17" y1="17" x2="21" y2="21"/><line x1="17" y1="21" x2="21" y2="17"/></svg>
+            </div>
+            <h3>Corte & Usinagem</h3>
+            <p>Corte de precisão e usinagem CNC para peças sob medida com alta qualidade de acabamento.</p>
           </div>
-          <div class="stat-item">
-            <div class="stat-number text-gradient-green" data-count="1200" data-suffix="+">0</div>
-            <div class="stat-label">Produtos Disponiveis</div>
+          <div class="feature-card fade-up">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C6734" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3z"/><path d="M3 17h18v4H3z"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+            </div>
+            <h3>Aplicação de Fita de Borda</h3>
+            <p>Colagem e acabamento de fitas de borda com equipamentos modernos para resultado impecável.</p>
           </div>
-          <div class="stat-item">
-            <div class="stat-number text-gradient-green" data-count="15" data-suffix="">0</div>
-            <div class="stat-label">Anos de Mercado</div>
+          <div class="feature-card fade-up">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C6734" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/></svg>
+            </div>
+            <h3>Furação</h3>
+            <p>Furação programada e precisa para instalação de ferragens, dobradiças e corrediças.</p>
           </div>
-          <div class="stat-item">
-            <div class="stat-number text-gradient-accent" data-count="98" data-suffix="%">0</div>
-            <div class="stat-label">Clientes Satisfeitos</div>
+          <div class="feature-card fade-up">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C6734" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Afiação de Serra</h3>
+            <p>Serviço especializado de afiação para manter suas ferramentas com desempenho máximo.</p>
+          </div>
+          <div class="feature-card fade-up">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C6734" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V10l8-7 8 7v10"/><path d="M10 20v-5h4v5"/></svg>
+            </div>
+            <h3>Carpintaria</h3>
+            <p>Serviços de carpintaria com profissionais experientes para peças especiais e únicas.</p>
+          </div>
+          <div class="feature-card fade-up">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C6734" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><line x1="3" y1="9" x2="9" y2="9"/><line x1="3" y1="15" x2="9" y2="15"/></svg>
+            </div>
+            <h3>Painel Ripado & Canaletado</h3>
+            <p>Fabricação de painéis ripados e canaletados para ambientes sofisticados.</p>
           </div>
         </div>
       </div>
     </section>
 
+    </section>
+
     <!-- ============================
-       CTA SECTION
+       NOSSAS LOJAS
        ============================ -->
-    <section id="contato" class="section-pad cta-section">
-      <div class="cta-glow"></div>
-      <div class="cta-content fade-up">
-        <h2>Pronto para elevar sua <span class="text-gradient-green">marcenaria</span>?</h2>
-        <p>Entre em contato e descubra como a GMAD pode ser a parceira ideal para o sucesso dos seus projetos.</p>
-        <a href="https://wa.me/5500000000000" target="_blank" class="btn-cta"
-          style="padding: 20px 40px; font-size: 1.2rem;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-            <path
-              d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 0 0 .611.611l4.458-1.495A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.34 0-4.508-.642-6.378-1.757l-.456-.274-2.645.887.887-2.645-.274-.456A9.953 9.953 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z" />
-          </svg>
-          Falar pelo WhatsApp
-        </a>
+    <section id="lojas" class="section-pad" style="background: var(--bg-alt);">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Nossas Lojas
+          </div>
+          <h2>Encontre a GMAD <span class="text-gradient-green">mais perto de você</span></h2>
+          <p>Mais de 80 lojas físicas por todo o Brasil. Atendimento especializado, estoque completo e o marceneiro sai com o que precisa.</p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="stores-filter fade-up">
+          <div class="stores-filter-group">
+            <label for="filter-estado" class="stores-filter-label">Estado</label>
+            <div class="stores-select-wrap">
+              <select id="filter-estado" class="stores-select" onchange="filterStores()">
+                <option value="">Todos os estados</option>
+                <option value="AC">Acre (AC)</option>
+                <option value="AM">Amazonas (AM)</option>
+                <option value="BA">Bahia (BA)</option>
+                <option value="CE">Ceará (CE)</option>
+                <option value="DF">Distrito Federal (DF)</option>
+                <option value="ES">Espírito Santo (ES)</option>
+                <option value="GO">Goiás (GO)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="MS">Mato Grosso do Sul (MS)</option>
+                <option value="MT">Mato Grosso (MT)</option>
+                <option value="PA">Pará (PA)</option>
+                <option value="PB">Paraíba (PB)</option>
+                <option value="PE">Pernambuco (PE)</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="RN">Rio Grande do Norte (RN)</option>
+                <option value="RO">Rondônia (RO)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+                <option value="SC">Santa Catarina (SC)</option>
+                <option value="SE">Sergipe (SE)</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="TO">Tocantins (TO)</option>
+              </select>
+              <svg class="stores-select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="stores-filter-group">
+            <label for="filter-cidade" class="stores-filter-label">Buscar</label>
+            <div class="stores-input-wrap">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input id="filter-cidade" type="text" class="stores-input" placeholder="Nome ou cidade..." oninput="filterStores()">
+            </div>
+          </div>
+          <div class="stores-filter-count">
+            <span id="stores-count">84</span> lojas encontradas
+          </div>
+        </div>
+
+        <!-- Lista de lojas (populada via JS) -->
+        <div class="stores-list" id="stores-list">
+          <div class="stores-empty" id="stores-empty" style="display:none;">
+            Nenhuma loja encontrada para o filtro selecionado.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================
+       NEWSLETTER / CONTATO
+       ============================ -->
+    <section class="newsletter-section section-pad">
+      <div class="container">
+        <div class="newsletter-text fade-up">
+          <div class="badge" style="margin-bottom:16px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8 10a16 16 0 0 0 6 6l.35-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 17.2z"/></svg>
+            Fale com a GMAD
+          </div>
+          <h2>Precisa de orçamento ou <span class="text-gradient-green">tirar dúvidas?</span></h2>
+          <p>Nossa equipe está pronta para atender você. Fale pelo WhatsApp e receba atendimento especializado em marcenaria.</p>
+        </div>
+
+        <!-- Cards de contato -->
+        <div class="contact-cards fade-up">
+          <a href="https://wa.me/554298424-0280" target="_blank" class="contact-card">
+            <div class="contact-card-icon" style="background: linear-gradient(135deg, #1C6734, #2d9147);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 0 0 .611.611l4.458-1.495A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.34 0-4.508-.642-6.378-1.757l-.456-.274-2.645.887.887-2.645-.274-.456A9.953 9.953 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+              </svg>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-title">Compre pelo WhatsApp</span>
+              <span class="contact-card-sub">Clique para comprar</span>
+            </div>
+          </a>
+
+          <a href="tel:+554298424-0280" class="contact-card">
+            <div class="contact-card-icon" style="background: linear-gradient(135deg, #E76041, #c94e32);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8 10a16 16 0 0 0 6 6l.35-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 17.2z"/>
+              </svg>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-title">Central de Atendimento</span>
+              <span class="contact-card-sub">(42) 98424-0280</span>
+            </div>
+          </a>
+
+          <div class="contact-card">
+            <div class="contact-card-icon" style="background: linear-gradient(135deg, #154f28, #1C6734);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-title">Atendimento SAC</span>
+              <span class="contact-card-sub">Seg a Sex: 8h às 18h</span>
+            </div>
+            <span class="contact-card-online"></span>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -317,7 +554,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <div class="logo-text text-gradient-green">GMAD</div>
+            <img src="assets/img/gmad.webp" alt="GMAD" style="height: 32px; display: block; margin-bottom: 12px; filter: grayscale(100%) brightness(200%); opacity: 0.8;">
             <p style="margin-bottom: 8px; font-size: 0.85rem; color: var(--accent); font-weight: 600;">Tudo para Moveis
             </p>
             <p>Oferecemos a mais completa linha de produtos e servicos na producao de moveis, atendendo profissionais da
@@ -329,7 +566,6 @@
             <a href="#">Home</a>
             <a href="#sobre">Sobre</a>
             <a href="#produtos">Produtos</a>
-            <a href="#numeros">Resultados</a>
           </div>
 
           <div class="footer-col">

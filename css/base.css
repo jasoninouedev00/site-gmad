@@ -63,8 +63,8 @@ ul, ol {
   align-items: center;
   gap: 12px;
   background: var(--gradient-cta);
-  color: var(--primary-fg);
-  font-weight: 700;
+  color: var(--dark-bg);
+  font-weight: 800;
   font-size: 1.1rem;
   padding: 16px 36px;
   border-radius: var(--radius);
