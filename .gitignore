@@ -27,6 +27,5 @@ exemplos/
 # Arquivos locais / referência
 *.xlsx
 *.pdf
-*.gif
 .playwright-mcp/
 bola-da-vez.html
