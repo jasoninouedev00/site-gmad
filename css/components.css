@@ -205,33 +205,6 @@
   flex-wrap: wrap;
 }
 
-.scroll-indicator {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 20;
-  animation: bounce 2s infinite;
-}
-
-.scroll-pill {
-  width: 24px;
-  height: 40px;
-  border-radius: 9999px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 6px;
-}
-
-.scroll-dot {
-  width: 6px;
-  height: 10px;
-  border-radius: 9999px;
-  background: var(--primary);
-}
-
 /* ============================
    FEATURES / ABOUT
    ============================ */
