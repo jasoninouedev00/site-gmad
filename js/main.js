@@ -18,6 +18,39 @@ document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
 // Navbar Scroll Effect
 // ============================
 const navbar = document.querySelector('.navbar');
+const navSectionLinks = Array.from(
+  document.querySelectorAll('.navbar-links a[href^="#"]:not(.navbar-cta)')
+);
+const navSections = navSectionLinks
+  .map((link) => ({
+    link,
+    section: document.querySelector(link.getAttribute('href')),
+  }))
+  .filter((item) => item.section);
+
+function updateActiveNavLink() {
+  if (!navSections.length) return;
+
+  const activationLine = navbar.offsetHeight + 24;
+  let activeItem = navSections[0];
+
+  for (const item of navSections) {
+    const rect = item.section.getBoundingClientRect();
+
+    if (rect.top <= activationLine && rect.bottom > activationLine) {
+      activeItem = item;
+      break;
+    }
+
+    if (rect.top <= activationLine) {
+      activeItem = item;
+    }
+  }
+
+  navSectionLinks.forEach((link) => {
+    link.classList.toggle('active', link === activeItem.link);
+  });
+}
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 60) {
@@ -25,7 +58,11 @@ window.addEventListener('scroll', () => {
   } else {
     navbar.classList.remove('scrolled');
   }
+
+  updateActiveNavLink();
 });
+
+updateActiveNavLink();
 
 // ============================
 // Mobile Menu Toggle

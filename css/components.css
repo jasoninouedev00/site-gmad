@@ -279,6 +279,34 @@
   line-height: 1.6;
 }
 
+.service-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.service-card-img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+
+.service-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-card-img img {
+  transform: scale(1.06);
+}
+
+.service-card-body {
+  padding: 28px 24px 32px;
+}
+
 /* ============================
    CATEGORIES / PRODUCTS
    ============================ */
@@ -367,7 +395,7 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1.2fr 1fr;
   gap: 48px;
 }
 
@@ -833,6 +861,118 @@
   gap: 10px;
   box-shadow: var(--glow-green);
   backdrop-filter: blur(12px);
+}
+
+/* ============================
+   SOBRE SPLIT
+   ============================ */
+.sobre-section {
+  overflow: hidden;
+}
+
+.sobre-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 580px;
+}
+
+.sobre-left,
+.sobre-right {
+  display: flex;
+  align-items: center;
+}
+
+.sobre-left {
+  background: var(--primary);
+  padding: 80px 64px;
+}
+
+.sobre-right {
+  background: var(--fg);
+  padding: 80px 64px;
+}
+
+.sobre-left-inner,
+.sobre-right-inner {
+  width: 100%;
+  max-width: 560px;
+}
+
+.badge--light {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 9999px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.sobre-headline {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.sobre-headline em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.sobre-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 520px;
+}
+
+.sobre-right-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.sobre-bloco {
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+}
+
+.sobre-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.sobre-bloco p {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sobre-valores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sobre-valor-chip {
+  border: 1px solid rgba(28, 103, 52, 0.5);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
 }
 
 /* ============================
@@ -1871,6 +2011,15 @@
 
   .section-header h2 {
     font-size: 1.75rem;
+  }
+
+  .sobre-split {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-left,
+  .sobre-right {
+    padding: 60px 28px;
   }
 
   .hero-title {
