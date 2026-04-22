@@ -97,54 +97,6 @@ if (menuToggle) {
 }
 
 // ============================
-// Floating Particles
-// ============================
-function createParticles(container, count = 15) {
-  const el = document.querySelector(container);
-  if (!el) return;
-
-  for (let i = 0; i < count; i++) {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-    const size = Math.random() * 4 + 2;
-    particle.style.cssText = `
-      width: ${size}px;
-      height: ${size}px;
-      left: ${Math.random() * 100}%;
-      top: ${Math.random() * 100}%;
-      animation: float ${6 + Math.random() * 6}s ease-in-out ${Math.random() * 4}s infinite;
-      opacity: ${0.2 + Math.random() * 0.4};
-    `;
-    el.appendChild(particle);
-  }
-}
-
-createParticles('.hero');
-
-// ============================
-// Stats Counter Animation
-// ============================
-function animateCounters() {
-  const counters = document.querySelectorAll('[data-count]');
-  counters.forEach((counter) => {
-    const target = parseInt(counter.dataset.count, 10);
-    const suffix = counter.dataset.suffix || '';
-    const duration = 2000;
-    const start = performance.now();
-
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      counter.textContent = Math.floor(target * eased) + suffix;
-      if (progress < 1) requestAnimationFrame(update);
-    }
-
-    requestAnimationFrame(update);
-  });
-}
-
-// ============================
 // Stores Filter
 // ============================
 // ============================
@@ -285,21 +237,6 @@ function filterStores() {
   });
   renderStores(filtered);
 }
-
-const statsObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateCounters();
-        statsObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.3 }
-);
-
-const statsSection = document.querySelector('.stats-section');
-if (statsSection) statsObserver.observe(statsSection);
 
 // Initial render of all stores
 renderStores(STORES_DATA);
