@@ -192,10 +192,64 @@ var STORES_DATA = [
   ['GMAD Volta Redonda', 'Volta Redonda', 'RJ', 'https://www.gmad.com.br/gmad-voltaredonda'],
 ];
 
-var _STORE_ARROW = '<svg class="store-item-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+var _STORE_ARROW = '<svg class="store-item-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
+
+var STORE_DETAILS = {
+  'GMAD Lojão do Marceneiro - Rio Branco': {
+    title: 'GMAD - Lojão do Marceneiro - Rio Branco',
+    scheduleTitle: 'HORÁRIO DE FUNCIONAMENTO:',
+    scheduleText: 'Segunda à Sexta das 7h30 às 12h e das 14h às 17h30\nSábados das 7h30 às 12h',
+    addressTitle: 'ENDEREÇO:',
+    addressText: 'Avenida Ceará, 3131 Jardim Nazle\nRio Branco / Acre\nCEP: 69918-084',
+    contactTitle: 'CONTATO:',
+    contactText: 'Telefone: (68) 3226-6078',
+    email: 'lojaofilial03@hotmail.com',
+    whatsapp: 'https://wa.me/556832266078'
+  }
+};
 
 function _removeAccents(str) {
   return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
+function _buildStoreDetailsHtml(s) {
+  var detail = STORE_DETAILS[s[0]];
+
+  if (!detail) {
+    return (
+      '<div class="store-details-body">' +
+        '<h4 class="store-details-title">' + s[0] + '</h4>' +
+        '<p class="store-details-text">Cidade: ' + s[1] + ' - ' + s[2] + '</p>' +
+        '<div class="store-details-actions">' +
+          '<button type="button" class="store-action-btn store-action-btn--whats" disabled>Falar no WhatsApp</button>' +
+          '<a href="' + s[3] + '" target="_blank" rel="noopener noreferrer" class="store-action-btn store-action-btn--site">Ir para página da loja</a>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+
+  return (
+    '<div class="store-details-body">' +
+      '<h4 class="store-details-title">' + detail.title + '</h4>' +
+      '<div class="store-details-block">' +
+        '<p class="store-details-label">' + detail.scheduleTitle + '</p>' +
+        '<p class="store-details-text">' + detail.scheduleText.replace(/\n/g, '<br>') + '</p>' +
+      '</div>' +
+      '<div class="store-details-block">' +
+        '<p class="store-details-label">' + detail.addressTitle + '</p>' +
+        '<p class="store-details-text">' + detail.addressText.replace(/\n/g, '<br>') + '</p>' +
+      '</div>' +
+      '<div class="store-details-block">' +
+        '<p class="store-details-label">' + detail.contactTitle + '</p>' +
+        '<p class="store-details-text">' + detail.contactText + '</p>' +
+      '</div>' +
+      '<div class="store-details-actions">' +
+        '<a href="' + detail.whatsapp + '" target="_blank" rel="noopener noreferrer" class="store-action-btn store-action-btn--whats">Falar no WhatsApp</a>' +
+        '<a href="' + s[3] + '" target="_blank" rel="noopener noreferrer" class="store-action-btn store-action-btn--site">Ir para página da loja</a>' +
+      '</div>' +
+      '<p class="store-details-email">E-mail: <a href="mailto:' + detail.email + '">' + detail.email + '</a></p>' +
+    '</div>'
+  );
 }
 
 function renderStores(stores) {
@@ -213,19 +267,43 @@ function renderStores(stores) {
   empty.style.display = 'none';
 
   stores.forEach(function (s) {
-    var a = document.createElement('a');
-    a.className = 'store-item';
-    a.href = s[3];
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    a.innerHTML =
+    var item = document.createElement('div');
+    item.className = 'store-item';
+
+    var trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'store-item-trigger';
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.innerHTML =
       '<div class="store-item-info">' +
         '<span class="store-item-name">' + s[0] + '</span>' +
         '<span class="store-item-city">' + s[1] + '</span>' +
       '</div>' +
       '<span class="store-item-state">' + s[2] + '</span>' +
       _STORE_ARROW;
-    list.insertBefore(a, empty);
+
+    var details = document.createElement('div');
+    details.className = 'store-item-details';
+    details.innerHTML = _buildStoreDetailsHtml(s);
+
+    trigger.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+
+      list.querySelectorAll('.store-item.open').forEach(function (openItem) {
+        openItem.classList.remove('open');
+        var openTrigger = openItem.querySelector('.store-item-trigger');
+        if (openTrigger) openTrigger.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    item.appendChild(trigger);
+    item.appendChild(details);
+    list.insertBefore(item, empty);
   });
 }
 
