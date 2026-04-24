@@ -44,7 +44,7 @@
   /* Surfaces & Overlays */
   --dark-bg: #0b1a10;
   --overlay-bg: rgba(13, 26, 15, 0.98);
-  --navbar-bg: rgba(255, 255, 255, 0.97);
+  --navbar-bg: #0b1a10;
 
   /* Shadows */
   --shadow-sm: 0 2px 20px rgba(0, 0, 0, 0.08);

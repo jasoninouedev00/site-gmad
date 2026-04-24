@@ -73,6 +73,7 @@ const navLinks = document.querySelector('.navbar-links');
 if (menuToggle) {
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('open');
+    document.body.classList.toggle('menu-open', navLinks.classList.contains('open'));
     const spans = menuToggle.querySelectorAll('span');
     if (navLinks.classList.contains('open')) {
       spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
@@ -88,6 +89,7 @@ if (menuToggle) {
   navLinks.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
+      document.body.classList.remove('menu-open');
       const spans = menuToggle.querySelectorAll('span');
       spans[0].style.transform = '';
       spans[1].style.opacity = '';

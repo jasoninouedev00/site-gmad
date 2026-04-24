@@ -9,13 +9,10 @@
   z-index: 1000;
   padding: 16px 0;
   border-top: 3px solid var(--accent);
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
-.navbar.scrolled {
   background: var(--navbar-bg);
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-sm);
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 .navbar .container {
@@ -51,7 +48,7 @@
 }
 
 .navbar.scrolled .navbar-links a {
-  color: var(--dark-bg);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .navbar-links a:hover,
@@ -61,7 +58,7 @@
 
 .navbar.scrolled .navbar-links a:hover,
 .navbar.scrolled .navbar-links a.active {
-  color: var(--dark-bg);
+  color: var(--primary);
 }
 
 .navbar-links a::after {
@@ -78,6 +75,25 @@
 .navbar-links a:hover::after,
 .navbar-links a.active::after {
   width: 100%;
+}
+
+.navbar-portal-logo::after {
+  display: none !important;
+}
+
+.navbar-portal-logo {
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.navbar-portal-logo:hover {
+  opacity: 1;
+}
+
+.navbar-portal-text {
+  display: none;
 }
 
 .navbar-cta {
@@ -104,7 +120,7 @@
 }
 
 .navbar.scrolled .menu-toggle span {
-  background: var(--fg);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* ============================
@@ -803,8 +819,8 @@
 
 .hero-img {
   width: 100%;
-  max-width: 540px;
-  height: 520px;
+  max-width: 360px;
+  height: 380px;
   object-fit: cover;
   border-radius: 1.75rem;
   display: block;
@@ -1900,11 +1916,29 @@
     gap: 40px;
   }
   .hero-img {
-    height: 420px;
+    height: 320px;
   }
 }
 
 @media (max-width: 768px) {
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 998;
+  }
+
+  body.menu-open::before {
+    opacity: 1;
+  }
+
   .navbar-links {
     display: none;
     position: fixed;
@@ -1950,6 +1984,21 @@
 
   .navbar-links a::after {
     display: none;
+  }
+
+  .navbar-links .navbar-portal-logo img {
+    display: none !important;
+  }
+
+  .navbar-links .navbar-portal-logo {
+    justify-content: flex-start;
+  }
+
+  .navbar-links .navbar-portal-text {
+    display: inline;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.92);
   }
 
   .navbar-cta {
